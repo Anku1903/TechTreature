@@ -28,6 +28,9 @@ const userSchema =new mongoose.Schema({
         required:[true,"please provide a role"],
         enum:['student','recruiter']
     },
+    applyforjob:[
+        {type:mongoose.Schema.Types.ObjectId, ref :"Job"}
+    ],
     resetPasswordToken:String,
     resetPasswordExpires:Date,
 

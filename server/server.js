@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json())
 
 app.use ('/api/auth',require('./routes/auth'));
+app.use ('/api/job',require('./routes/jobs'));
+app.use('/api/student',require('./routes/student'))
 app.use ('/api/private',require('./routes/private'));
 
 app.use(errorHandler)
